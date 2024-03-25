@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title> 
 <style>
-  .userInput {
-    margin-bottom: 20px; 
-  }
-
-@import url("signUpCss3.css"); 
-
+@import url("signUpCss3.css");
 </style>
 <!-- 자바스크립트 -->
 <script src ="signUpjs3.js"></script> 
@@ -25,7 +19,7 @@
          <header>
             <div id="header">
                <h1 class="name">
-                  <p>회원가입 야호</p>
+                  <p>회원가입</p>
                </h1>
                </div>
          </header>
@@ -34,9 +28,12 @@
             <div class="row_group">
                <div class="userInput">
         <!-- 아이디 입력 -->
+               <div>
                   <h3 class="list">아이디<span id="idError"></span></h3>
-                  <span class="box int_id" ><input type="text" id="id" class="int check"
-                     maxlength="20"></span>
+                  <span class="box int_id">
+                     <input type="text" id="id" class="int check" maxlength="20">
+                  </span>
+                  <button onclick="checkDuplicate()">중복 확인</button>
                </div>
                <div class="userInput">
         <!-- 비밀번호 입력 -->
@@ -98,10 +95,13 @@
      <!-- 개인정보 수집 동의 -->
                 <div class="userInput">
                 <h3 class="list">개인정보 수집/이용동의<span id="consentError"></span></h3>
-                <div id="informationConsent">
-                <span id="consentBox">
-                    <h3>개인정보 처리방침<span id="consentError"></span></h3>
-                    <!-- 여기에 내용 들어오기  -->
+                  <div id="informationConsent" style="width: 300px; height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 5px;">
+                     <span id="consentBox">
+                     <h3>개인정보 처리방침<span id="consentError"></span></h3>
+                     <!-- 개인정보 처리방침 -->
+                        개인정보 처리방침
+                        ...
+                        <!-- 개인정보 처리방침 -->
                 </span>
              </div>
              <label class="select"><input type="radio" id="check" name="check" value="동의">동의</label>
