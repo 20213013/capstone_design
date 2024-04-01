@@ -1,0 +1,37 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .scheduler {
+    width: 75%; /* 전체 너비의 75%를 차지하도록 설정 */
+    margin: auto;
+  }
+  
+  .schedule-table {
+    display: grid;
+    grid-template-columns: auto 1fr; /* 첫 번째 열은 시간, 두 번째 열은 일정 표 */
+  }
+  
+  .time-column {
+    border-right: 1px solid #ccc;
+  }
+  
+  .time-cell, .day-cell {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .schedule-content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 요일에 따라 일정 표의 열을 생성 */
+    grid-auto-rows: 50px; /* 칸의 높이 설정 */
+    border-left: 1px solid #ccc;
